@@ -12,7 +12,13 @@ const BlogCard = ({ slug, title, date, excerpt, datetime }) => (
 		<div className="space-y-5 xl:col-span-3">
 			<div className="space-y-6">
 				<h2 className="text-2xl leading-8 font-bold tracking-tight">
-					<a className="text-gray-900">{title}</a>
+					<Link
+						to={slug}
+						aria-label={`Read "${title}"`}
+						className="text-gray-900"
+					>
+						{title}
+					</Link>
 				</h2>
 				<div className="prose text-gray-500">
 					<p>{excerpt}</p>

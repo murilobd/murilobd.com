@@ -4,7 +4,7 @@ import React from "react";
 
 const Header = ({ siteTitle }) => (
 	<div className="bg-gray-800">
-		<div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+		<div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
 			<div className="flex justify-center md:order-2">
 				<a
 					href="https://twitter.com/murilobd"

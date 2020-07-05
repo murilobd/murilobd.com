@@ -12,7 +12,7 @@ With **indexOf** and **lastIndexOf**, we can do that easily.
 [lastIndexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf) will return the item's last position of the last occurence.
 
 ```js
-var list = ["javascript", "php", "mysql", "javascript", "php", "javascript"];
+const list = ["javascript", "php", "mysql", "javascript", "php", "javascript"];
 
 list.indexOf("javscript"); // 0
 list.lastIndexOf("javascript"); //5
@@ -40,4 +40,7 @@ function nomDuplicatedItens(arr) {
 
 	return nomduplicated;
 }
+
+var list = ["javascript", "php", "mysql", "javascript", "php", "javascript"];
+nomDuplicatedItens(list); // ["mysql"]
 ```

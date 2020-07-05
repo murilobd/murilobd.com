@@ -6,10 +6,8 @@ import SEO from "../components/seo";
 import BlogCard from "../components/blog-card";
 
 const IndexPage = ({ data }) => {
-	console.log(data);
-
 	return (
-		<Layout title="Home">
+		<Layout>
 			<SEO title="Home" />
 			<ul className="divide-y divide-gray-200">
 				{data.allMarkdownRemark.edges.map(({ node }) => (

@@ -6,11 +6,24 @@ import SEO from "../components/seo";
 export default function BlogPost({ data }) {
 	const post = data.markdownRemark;
 
+	const titleDescription = (
+		<time dateTime={post.frontmatter.date}>
+			{post.frontmatter.datehuman}
+		</time>
+	);
+
 	return (
-		<Layout title={post.frontmatter.title}>
-			<SEO title={post.frontmatter.title} description={post.excerpt} />
-			<div className="bg-white rounded-xs shadow px-5 py-6 sm:px-6">
-				<div dangerouslySetInnerHTML={{ __html: post.html }} />
+		<Layout title={post.frontmatter.title} description={titleDescription}>
+			<SEO
+				title={post.frontmatter.title}
+				description={post.excerpt}
+				type="article"
+			/>
+			<div className="bg-white px-5 sm:px-6">
+				<div
+					className="prose pt-5 pb-8"
+					dangerouslySetInnerHTML={{ __html: post.html }}
+				/>
 			</div>
 		</Layout>
 	);
@@ -22,6 +35,9 @@ export const query = graphql`
 			html
 			frontmatter {
 				title
+				date
+				datehuman: date(formatString: "dddd, MMMM DD, YYYY")
+				tags
 			}
 			excerpt
 		}
