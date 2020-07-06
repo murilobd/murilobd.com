@@ -1,10 +1,4 @@
-const purgecss = require("@fullhuman/postcss-purgecss")({
-	defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || [],
-});
-const resolveConfig = require("tailwindcss/resolveConfig");
 const tailwindConfig = require("./tailwind.config.js");
-const { purge } = require("tailwindcss/stubs/defaultConfig.stub");
-const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
 	siteMetadata: {
@@ -24,7 +18,16 @@ module.exports = {
 		{
 			resolve: "gatsby-transformer-remark",
 			options: {
-				plugins: ["gatsby-remark-use-frontmatter-path"],
+				plugins: [
+					"gatsby-remark-use-frontmatter-path",
+					{
+						resolve: `gatsby-remark-highlight-code`,
+						options: {
+							// theme: `material`,
+							// lineNumbers: true,
+						},
+					},
+				],
 			},
 		},
 		`gatsby-transformer-sharp`,
@@ -48,9 +51,9 @@ module.exports = {
 				postCssPlugins: [
 					require(`tailwindcss`)(tailwindConfig),
 					require(`autoprefixer`),
-					// ...(process.env.NODE_ENV == "production" ? [purgecss] : []),
-					// purgecss,
-					require(`cssnano`),
+					...(process.env.NODE_ENV == "production"
+						? [require(`cssnano`)]
+						: []),
 				],
 			},
 		},

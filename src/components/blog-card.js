@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 const BlogCard = ({ slug, title, date, excerpt, datetime }) => (
-	<article className="space-y-2 ">
+	<article className="space-y-2">
 		<dl>
 			<dt className="sr-only">Published on</dt>
 			<dd className="text-xs leading-3 text-gray-500">
@@ -10,7 +10,7 @@ const BlogCard = ({ slug, title, date, excerpt, datetime }) => (
 			</dd>
 		</dl>
 		<div className="space-y-5 xl:col-span-3">
-			<div className="space-y-6">
+			<div className="space-y-3">
 				<h2 className="text-2xl leading-8 font-bold tracking-tight">
 					<Link
 						to={slug}
@@ -20,7 +20,7 @@ const BlogCard = ({ slug, title, date, excerpt, datetime }) => (
 						{title}
 					</Link>
 				</h2>
-				<div className="prose text-gray-500">
+				<div className="text-gray-500 leading-6">
 					<p>{excerpt}</p>
 				</div>
 			</div>

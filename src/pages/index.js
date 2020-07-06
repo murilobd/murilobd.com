@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
 			<SEO title="Home" />
 			<ul className="divide-y divide-gray-200">
 				{data.allMarkdownRemark.edges.map(({ node }) => (
-					<li className="py-12" key={node.id}>
+					<li className="py-6" key={node.id}>
 						<BlogCard
 							title={node.frontmatter.title}
 							date={node.frontmatter.date}
