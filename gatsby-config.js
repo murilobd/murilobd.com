@@ -1,3 +1,11 @@
+const purgecss = require("@fullhuman/postcss-purgecss")({
+	defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || [],
+});
+const resolveConfig = require("tailwindcss/resolveConfig");
+const tailwindConfig = require("./tailwind.config.js");
+const { purge } = require("tailwindcss/stubs/defaultConfig.stub");
+const fullConfig = resolveConfig(tailwindConfig);
+
 module.exports = {
 	siteMetadata: {
 		title: `MuriloBD.com Blog`,
@@ -34,6 +42,17 @@ module.exports = {
 		// 	},
 		// },
 		// `gatsby-plugin-offline`,
-		`gatsby-plugin-postcss`,
+		{
+			resolve: `gatsby-plugin-postcss`,
+			options: {
+				postCssPlugins: [
+					require(`tailwindcss`)(tailwindConfig),
+					require(`autoprefixer`),
+					// ...(process.env.NODE_ENV == "production" ? [purgecss] : []),
+					// purgecss,
+					require(`cssnano`),
+				],
+			},
+		},
 	],
 };

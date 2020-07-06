@@ -13,31 +13,31 @@ So, I'll try my best to explain what I did to have this blog up and running in a
 
 ## Technical details
 
-This blog is developed using (GatsbyJS)[https://www.gatsbyjs.org/]. Why?
+This blog is developed using [GatsbyJS](https://www.gatsbyjs.org/). Why?
 
--   with a feel tweaks (or even none if you prefer to use their awesome [starter-kits templates](https://www.gatsbyjs.org/starters/?v=2)) you have a blog up and running
+-   with a feel tweaks (or even none if you prefer to use their awesome (starter-kits templates)[https://www.gatsbyjs.org/starters/?v=2]) you have a blog up and running
 -   it uses ReactJS, so it's a good way to learn and improve this skill
 -   it's well known for generating fast & seo-friendly static websites (all a blog needs and wants)
 -   I can host it on github for free and use netlify to deploy it
--   If I want, there's a ready CMS UI ((netlify-cms)[https://www.netlifycms.org/]) that's it's almost plug-and-play
+-   If I want, there's a ready CMS UI ([netlify-cms](https://www.netlifycms.org/)) that's it's almost plug-and-play
 
 And the process I took to develop/style was:
 
--   I started with the (starter default)[https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-default/] because I wanted to learn some inner details of how it works and what I would have to do to implement anything on it
+-   I started with the [starter default](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-default/) because I wanted to learn some inner details of how it works and what I would have to do to implement anything on it
 -   As my first contact with GraphQL, I felt it would be a good idea to have it configured to me already
 -   It's a started default, so it's configured correctly to work
 
-After following the instructions to start the default template, I followed all 8 steps from the (tutorial pages)[https://www.gatsbyjs.org/tutorial/] to learn the basics of gatsby (and after finishing it, I had this blog ready and running - and a really good feeling about GatsbyJS!)
+After following the instructions to start the default template, I followed all 8 steps from the [tutorial pages](https://www.gatsbyjs.org/tutorial/) to learn the basics of gatsby (and after finishing it, I had this blog ready and running - and a really good feeling about GatsbyJS!)
 
 I'll use their implementation idea for the blog posts:
 
 -   all blog posts will be a .md (or .mdx if needed to use any component in the post) and they will be place under /src/pages folder
 -   for images, I'll host them under /src/assets/images
--   Styling will be done using (TailwindCSS)[https://tailwindcss.com/]
+-   Styling will be done using [TailwindCSS](https://tailwindcss.com/)
 
 ## In a nutshell
 
 -   blog created with GatsbyJS
--   style using TailwindCSS (basically a copy&paste from their blog! No shame on that as I suck as styling, so copied from the best!)
+-   style using TailwindCSS (basically a copy&paste from their blog! No shame on that as I suck on styling, so copied from the best!)
 -   deploy with netlify
 -   hosted on github
