@@ -16,6 +16,15 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `images`,
+				path: `${__dirname}/src/images`,
+			},
+		},
+		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
+		{
 			resolve: "gatsby-transformer-remark",
 			options: {
 				plugins: [
@@ -27,11 +36,30 @@ module.exports = {
 							// lineNumbers: true,
 						},
 					},
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth: 800,
+							// showCaptions: true,
+							quality: 55,
+							withWebp: true,
+						},
+					},
 				],
 			},
 		},
-		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
+		{
+			resolve: `gatsby-plugin-postcss`,
+			options: {
+				postCssPlugins: [
+					require(`tailwindcss`)(tailwindConfig),
+					require(`autoprefixer`),
+					...(process.env.NODE_ENV == "production"
+						? [require(`cssnano`)]
+						: []),
+				],
+			},
+		},
 		// {
 		// 	resolve: `gatsby-plugin-manifest`,
 		// 	options: {
@@ -45,17 +73,5 @@ module.exports = {
 		// 	},
 		// },
 		// `gatsby-plugin-offline`,
-		{
-			resolve: `gatsby-plugin-postcss`,
-			options: {
-				postCssPlugins: [
-					require(`tailwindcss`)(tailwindConfig),
-					require(`autoprefixer`),
-					...(process.env.NODE_ENV == "production"
-						? [require(`cssnano`)]
-						: []),
-				],
-			},
-		},
 	],
 };
