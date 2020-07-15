@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
 							date={node.frontmatter.date}
 							datetime={node.frontmatter.datetime}
 							slug={node.fields.slug}
-							excerpt={node.excerpt}
+							excerpt={node.frontmatter.excerpt}
 						/>
 					</li>
 				))}
@@ -29,16 +29,15 @@ const IndexPage = ({ data }) => {
 export const query = graphql`
 	query {
 		allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-			totalCount
 			edges {
 				node {
 					id
 					frontmatter {
 						title
+						excerpt
 						date(formatString: "DD MMMM, YYYY")
 						datetime: date(formatString: "YYYY-MM-DD")
 					}
-					excerpt
 					fields {
 						slug
 					}

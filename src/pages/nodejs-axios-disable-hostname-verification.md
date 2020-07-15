@@ -1,11 +1,11 @@
 ---
 title: "How to disable verification of hostname for https requests with node.js"
 date: "2020-07-15"
-excerpt: "It's better to use checkServerIdentity instead of rejectUnauthorized in your https.Agent to still use the certificate"
+excerpt: "ERR_TLS_CERT_ALTNAME_INVALID - It's better to use checkServerIdentity instead of rejectUnauthorized in your https.Agent to still use the certificate"
 tags: "javascript,nodejs"
 ---
 
-If you are developing on node.js and doing some https requests with a custom certificate, you might face this error: **ERR_TLS_CERT_ALTNAME_INVALID**. I found on some blog posts/github a solution to simply add a rejectUnauthorized to the agent and it would work.
+If you are developing on node.js and doing some https requests with a custom certificate, you might face this error: **`ERR_TLS_CERT_ALTNAME_INVALID`**. I found on some blog posts/github a solution to simply add a rejectUnauthorized to the agent and it would work.
 
 ```js
 const https = require("https");
