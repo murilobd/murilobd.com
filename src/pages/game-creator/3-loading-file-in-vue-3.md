@@ -9,12 +9,13 @@ While my research how Vue 3 works, I found through twitter the beta version for 
 What really pleased me was the fact that it’s very similar to Vue 2! That’s completely different from what Angular did when they released Angular 2. Super cool!
 
 I could stick to what I know about Vue and use the standard way of creating components
+
 ```js
 export default {
     name: “ComponentName”,
     methods: {
         fileChanged(file) {
-            /* … *.
+            /* … */
         }
     }
 }
@@ -23,6 +24,7 @@ export default {
 But I want to use the hottest feature: Composition API!
 
 My way to learn stuffs is:
+
 1. read the basics to have some understanding on how to use it and how it works
 2. use it
 
@@ -30,8 +32,12 @@ So, based on that, I read the [documentation](https://v3.vuejs.org/guide/composi
 
 ```html
 <template>
-    <span>Filename selected: {{ filename }}</span>
-    <input type=“file” accept="image/png” @change="selectedImage($event.target.files[0])” />
+	<span>Filename selected: {{ filename }}</span>
+	<input
+		type="“file”"
+		accept="image/png” @change="
+		selectedImage($event.target.files[0])”
+	/>
 </template>
 ```
 
@@ -41,7 +47,7 @@ import { ref } from "vue";
 export default {
     setup() {
         const filename = ref("");
-        
+
         function selectedImage(file) {
             filename.value = file.name;
         }
