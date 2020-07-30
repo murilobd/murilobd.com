@@ -65,24 +65,24 @@ notice that if containerId is not informed, it will automatically uses “gameCo
 
 I could simply import this directly into the App.vue file, but I’ll create a specific component just for that: Game.vue.
 
-```vue
+```js
 <template>
 	<div id="gameContainer"></div>
 </template>
 
 <script lang="ts">
-import Game from "../game/game";
+	import Game from "../game/game";
 
-import { onMounted, defineComponent } from "vue";
+	import { onMounted, defineComponent } from "vue";
 
-export default defineComponent({
-	name: "Game",
-	setup() {
-		onMounted(() => {
-			Game("gameContainer");
-		});
-	},
-});
+	export default defineComponent({
+		name: "Game",
+		setup() {
+			onMounted(() => {
+				Game("gameContainer");
+			});
+		},
+	});
 </script>
 ```
 
@@ -90,7 +90,7 @@ It’s a basic component that imports game.ts and, when mounted, it will call _g
 
 Okey dokey… now, as simple as that, we import Game.vue component into our App.vue and voilá!
 
-```vue
+```js
 <template>
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="max-w-3xl mx-auto">
@@ -103,17 +103,17 @@ Okey dokey… now, as simple as that, we import Game.vue component into our App.
 </template>
 
 <script>
-import FileImporter from "./components/FileImporter.vue";
-import Game from "./components/Game.vue";
-import { defineComponent } from "vue";
+	import FileImporter from "./components/FileImporter.vue";
+	import Game from "./components/Game.vue";
+	import { defineComponent } from "vue";
 
-export default defineComponent({
-	name: "App",
-	components: {
-		FileImporter,
-		Game,
-	},
-});
+	export default defineComponent({
+		name: "App",
+		components: {
+			FileImporter,
+			Game,
+		},
+	});
 </script>
 ```
 
