@@ -23,7 +23,7 @@ export default function BlogPost({ data }) {
 			/>
 			<div className="bg-white px-5 sm:px-6">
 				<div
-					className="prose pt-5 pb-8"
+					className="prose text-gray-500 mx-auto pt-5 pb-8"
 					dangerouslySetInnerHTML={{ __html: post.html }}
 				/>
 			</div>

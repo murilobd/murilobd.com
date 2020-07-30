@@ -6,7 +6,7 @@
   "author": "Murilo Boareto Delefrate <murilo@murilobd.com>",
   "dependencies": {
     "@deckdeckgo/highlight-code": "^1.1.2",
-    "@tailwindcss/ui": "^0.3.0",
+    "@tailwindcss/ui": "^0.4.0",
     "autoprefixer": "^9.8.4",
     "cssnano": "^4.1.10",
     "gatsby": "^2.23.10",
@@ -28,7 +28,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.5.1"
   },
   "devDependencies": {
     "prettier": "2.0.5"
