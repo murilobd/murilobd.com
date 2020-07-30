@@ -11,7 +11,7 @@ But, before, I’ll navigate through [Phaser documentation](https://photonstorm.
 
 So, first part is: let’s try to render a very simple scene with an image. To load images, we have to **pre-load** it insider a _preload()_ function. After that, inside _create()_, we add the preloaded image into the scene (and as an extra, we can add an animation to it!)
 
-```ts
+```js
 // demo.ts
 import "phaser";
 import logo from "../assets/phaser3-logo.png";
@@ -42,7 +42,7 @@ export default class Demo extends Phaser.Scene {
 
 Now, let’s create our main game file that will initialize Phaser with the scene included
 
-```ts
+```js
 // game.ts
 import "phaser";
 import Demo from "./demo";
