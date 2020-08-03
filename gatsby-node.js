@@ -20,7 +20,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
 	// **Note:** The graphql function call returns a Promise
-	// see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise for more info
 	const { createPage } = actions;
 	const result = await graphql(`
 		query {
@@ -46,5 +45,4 @@ exports.createPages = async ({ graphql, actions }) => {
 				slug: node.fields.slug,
 			},
 		});
-	});
 };
