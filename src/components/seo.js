@@ -19,12 +19,12 @@ function SEO({ description, lang, meta, title, type = "website" }) {
 						title
 						description
 						author
+						twitter
 					}
 				}
 			}
 		`
 	);
-
 	const metaDescription = description || site.siteMetadata.description;
 
 	return (
@@ -38,6 +38,10 @@ function SEO({ description, lang, meta, title, type = "website" }) {
 				{
 					name: `description`,
 					content: metaDescription,
+				},
+				{
+					name: `author`,
+					content: site.siteMetadata.author,
 				},
 				{
 					property: `og:title`,
@@ -56,8 +60,12 @@ function SEO({ description, lang, meta, title, type = "website" }) {
 					content: `summary`,
 				},
 				{
+					name: `twitter:site`,
+					content: site.siteMetadata.twitter,
+				},
+				{
 					name: `twitter:creator`,
-					content: site.siteMetadata.author,
+					content: site.siteMetadata.twitter,
 				},
 				{
 					name: `twitter:title`,

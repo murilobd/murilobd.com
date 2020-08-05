@@ -4,7 +4,8 @@ module.exports = {
 	siteMetadata: {
 		title: `MuriloBD.com Blog`,
 		description: `Blog for web developer full-stack Murilo Boareto Delefrate`,
-		author: `@murilobd`,
+		author: `Murilo Boareto Delefrate`,
+		twitter: "@murilobd",
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
@@ -53,18 +54,19 @@ module.exports = {
 				],
 			},
 		},
-		// {
-		// 	resolve: `gatsby-plugin-manifest`,
-		// 	options: {
-		// 		name: `Blog Murilo Boareto Delefrate`,
-		// 		short_name: `BlogMBD`,
-		// 		start_url: `/`,
-		// 		background_color: `#663399`,
-		// 		theme_color: `#663399`,
-		// 		display: `minimal-ui`,
-		// 		icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-		// 	},
-		// },
+		"gatsby-plugin-use-query-params",
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `Murilo Boareto Delefrate`,
+				short_name: `@murilobd`,
+				start_url: `/`,
+				background_color: `#663399`,
+				theme_color: `#663399`,
+				display: `minimal-ui`,
+				// icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+			},
+		},
 		// `gatsby-plugin-offline`,
 	],
 };
