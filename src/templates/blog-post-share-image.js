@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
 import { graphql } from "gatsby";
 import { useQueryParam, StringParam } from "use-query-params";
-import * as backgrounds from "hero-patterns";
-import { getColor, getSizes, getBackground } from "../helpers/helpers";
+import { getColor, getSizes, getBackgroundImage } from "../helpers/helpers";
 
 export default function BlogPostShareImage({ data, pageContext }) {
 	const [socialMedia, setSocialMedia] = useQueryParam(
 		"socialMedia",
 		StringParam
 	);
+	const sizes = getSizes(socialMedia);
 	const [color] = useQueryParam("color", StringParam);
+	const colors = getColor(color);
 	const title = data.markdownRemark.frontmatter.title;
 	const { twitter } = pageContext.site;
 
@@ -17,8 +18,6 @@ export default function BlogPostShareImage({ data, pageContext }) {
 		if (!socialMedia) setSocialMedia("twitter");
 	}, [setSocialMedia, socialMedia]);
 
-	const sizes = getSizes(socialMedia);
-	const colors = getColor(color);
 	return (
 		<div
 			className="flex items-center"
@@ -26,15 +25,15 @@ export default function BlogPostShareImage({ data, pageContext }) {
 				height: sizes.height,
 				width: sizes.width,
 				border: "solid 1px black",
-				backgroundImage: backgrounds[getBackground()](
-					colors.backgroundIcon,
+				backgroundImage: getBackgroundImage(
+					colors.backgroundImage,
 					0.4
 				),
 				backgroundColor: colors.background,
 			}}
 		>
 			<div
-				className="p-4 m-4 flex flex-col justify-between rounded-lg shadow-lg"
+				className="p-4 m-4 flex flex-col justify-between rounded-lg shadow-lg opacity-75"
 				style={{
 					backgroundColor: colors.panel,
 					color: colors.text,

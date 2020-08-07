@@ -1,78 +1,80 @@
+import * as backgrounds from "hero-patterns";
+
 const colors = [
 	{
 		color: "gray",
 		background: "#f9fafb",
-		backgroundIcon: "#d2d6dc",
+		backgroundImage: "#d2d6dc",
 		panel: "#e5e7eb",
 		text: "#374151",
 	},
 	{
 		color: "cool-gray",
 		background: "#fbfdfe",
-		backgroundIcon: "#cfd8e3",
+		backgroundImage: "#cfd8e3",
 		panel: "#e2e8f0",
 		text: "#364152",
 	},
 	{
 		color: "red",
 		background: "#fdf2f2",
-		backgroundIcon: "#f8b4b4",
+		backgroundImage: "#f8b4b4",
 		panel: "#fbd5d5",
 		text: "#c81e1e",
 	},
 	{
 		color: "orange",
 		background: "#fff8f1",
-		backgroundIcon: "#fdba8c",
+		backgroundImage: "#fdba8c",
 		panel: "#fcd9bd",
 		text: "#b43403",
 	},
 	{
 		color: "yellow",
 		background: "#fdfdea",
-		backgroundIcon: "#faca15",
+		backgroundImage: "#faca15",
 		panel: "#fce96a",
 		text: "#8e4b10",
 	},
 	{
 		color: "green",
 		background: "#f3faf7",
-		backgroundIcon: "#84e1bc",
+		backgroundImage: "#84e1bc",
 		panel: "#bcf0da",
 		text: "#046c4e",
 	},
 	{
 		color: "teal",
 		background: "#edfafa",
-		backgroundIcon: "#7edce2",
+		backgroundImage: "#7edce2",
 		panel: "#afecef",
 		text: "#036672",
 	},
 	{
 		color: "blue",
 		background: "#ebf5ff",
-		backgroundIcon: "#a4cafe",
+		backgroundImage: "#a4cafe",
 		panel: "#c3ddfd",
 		text: "#1a56db",
 	},
 	{
 		color: "indigo",
 		background: "#f0f5ff",
-		backgroundIcon: "#b4c6fc",
+		backgroundImage: "#b4c6fc",
 		panel: "#cddbfe",
 		text: "#5145cd",
 	},
 	{
 		color: "purple",
 		background: "#f6f5ff",
-		backgroundIcon: "#cabffd",
+		backgroundImage: "#cabffd",
 		panel: "#dcd7fe",
 		text: "#6c2bd9",
 	},
 	{
 		color: "pink",
 		background: "#fdf2f8",
-		backgroundIcon: "#f8b4d9",
+		backgroundImage: "#f8b4d9",
 		panel: "#fad1e8",
 		text: "#bf125d",
 	},
@@ -218,20 +220,26 @@ export const getSizes = socialMedia => {
 /**
  * Get background from availableBackgrounds
  *
+ * @param {string} color
+ * @param {number|null} opacity
  * @param {string|null} background
  * @returns {string}
  */
-export const getBackground = background => {
-	const randomInt = randomInteger(availableBackgrounds.length);
-	if (!background) {
-		return availableBackgrounds[randomInt];
+export const getBackgroundImage = (color, opacity = 1, background) => {
+	if (background && availableBackgrounds.includes(background)) {
+		return backgrounds[background](color, opacity);
 	}
 
-	return availableBackgrounds[background] || availableBackgrounds[randomInt];
+	const randomInt = randomInteger(availableBackgrounds.length);
+	return backgrounds[availableBackgrounds[randomInt]](color, opacity);
 };
 
+/**
+ * Generate random integer between 0 and max (non-included)
+ *
+ * @param {integer} max
+ * @returns {integer}
+ */
 function randomInteger(max) {
 	return Math.floor(Math.random() * max);
 }
-
-export default getColor;
