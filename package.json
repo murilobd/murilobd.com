@@ -34,7 +34,8 @@
     "use-query-params": "^1.1.6"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "prettier": "2.0.5",
+    "puppeteer": "^5.2.1"
   },
   "keywords": [
     "gatsby",
@@ -48,7 +49,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "generateMetaImages": "node ./src/scripts/generatePostShareImage.js"
   },
   "repository": {
     "type": "git",

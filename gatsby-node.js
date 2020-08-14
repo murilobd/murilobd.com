@@ -45,19 +45,6 @@ exports.createPages = async ({ graphql, actions }) => {
 	`);
 
 	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-		if (process.env.gatsby_executing_command.includes("develop")) {
-			createPage({
-				path: `${node.fields.slug}image_tw`,
-				component: path.resolve(
-					`./src/templates/blog-post-share-image.js`
-				),
-				context: {
-					slug: node.fields.slug,
-					site: result.data.site.siteMetadata,
-				},
-			});
-		}
-
 		createPage({
 			path: node.fields.slug,
 			component: path.resolve(`./src/templates/blog-post.js`),
@@ -67,5 +54,18 @@ exports.createPages = async ({ graphql, actions }) => {
 				slug: node.fields.slug,
 			},
 		});
+
+		if (process.env.gatsby_executing_command.includes("develop")) {
+			createPage({
+				path: `${node.fields.slug}image_share`,
+				component: path.resolve(
+					`./src/templates/blog-post-share-image.js`
+				),
+				context: {
+					slug: node.fields.slug,
+					site: result.data.site.siteMetadata,
+				},
+			});
+		}
 	});
 };

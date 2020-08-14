@@ -5,8 +5,16 @@ import SEO from "../components/seo";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
 
-export default function BlogPost({ data }) {
+function getShareImageFilenameFromSlug(slug) {
+	// slug = /page-slug/
+	// slug = /folder/page-slug/
+	const splitSlug = slug.split("/").filter(content => content !== "");
+	return splitSlug[splitSlug.length - 1];
+}
+
+export default function BlogPost({ data, pageContext }) {
 	const post = data.markdownRemark;
+	const shareImageFilename = getShareImageFilenameFromSlug(pageContext.slug);
 
 	const titleDescription = (
 		<time dateTime={post.frontmatter.date}>
@@ -20,6 +28,7 @@ export default function BlogPost({ data }) {
 				title={post.frontmatter.title}
 				description={post.excerpt}
 				type="article"
+				shareImage={shareImageFilename}
 			/>
 			<div className="bg-white px-5 sm:px-6">
 				<div

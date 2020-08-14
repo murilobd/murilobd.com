@@ -6,6 +6,7 @@ module.exports = {
 		description: `Blog for web developer full-stack Murilo Boareto Delefrate`,
 		author: `Murilo Boareto Delefrate`,
 		twitter: "@murilobd",
+		url: "https://murilobd.com",
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
