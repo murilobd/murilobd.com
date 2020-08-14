@@ -10,7 +10,15 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, title, type = "website" }) {
+function SEO({
+	slug,
+	description,
+	lang,
+	meta,
+	title,
+	shareImage = null,
+	type = "website",
+}) {
 	const { site } = useStaticQuery(
 		graphql`
 			query {
@@ -19,12 +27,13 @@ function SEO({ description, lang, meta, title, type = "website" }) {
 						title
 						description
 						author
+						twitter
+						url
 					}
 				}
 			}
 		`
 	);
-
 	const metaDescription = description || site.siteMetadata.description;
 
 	return (
@@ -40,6 +49,10 @@ function SEO({ description, lang, meta, title, type = "website" }) {
 					content: metaDescription,
 				},
 				{
+					name: `author`,
+					content: site.siteMetadata.author,
+				},
+				{
 					property: `og:title`,
 					content: title,
 				},
@@ -51,13 +64,32 @@ function SEO({ description, lang, meta, title, type = "website" }) {
 					property: `og:type`,
 					content: type,
 				},
+				(shareImage && {
+					property: `og:image`,
+					content: `${site.siteMetadata.url}/static/${shareImage}-facebook.png`,
+				}) ||
+					{},
+				(shareImage && {
+					property: `og:image:width`,
+					content: `1200`,
+				}) ||
+					{},
+				(shareImage && {
+					property: `og:image:height`,
+					content: `628`,
+				}) ||
+					{},
 				{
 					name: `twitter:card`,
 					content: `summary`,
 				},
 				{
+					name: `twitter:site`,
+					content: site.siteMetadata.twitter,
+				},
+				{
 					name: `twitter:creator`,
-					content: site.siteMetadata.author,
+					content: site.siteMetadata.twitter,
 				},
 				{
 					name: `twitter:title`,
@@ -67,6 +99,11 @@ function SEO({ description, lang, meta, title, type = "website" }) {
 					name: `twitter:description`,
 					content: metaDescription,
 				},
+				(shareImage && {
+					property: `twitter:image`,
+					content: `${site.siteMetadata.url}/static/${shareImage}-twitter.png`,
+				}) ||
+					{},
 			].concat(meta)}
 		/>
 	);
