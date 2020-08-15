@@ -6,6 +6,13 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+function getShareImageFilenameFromSlug(slug) {
+	// slug = /page-slug/
+	// slug = /folder/page-slug/
+	const splitSlug = slug.split("/").filter(content => content !== "");
+	return splitSlug[splitSlug.length - 1];
+}
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
 	const { createNodeField } = actions;
 	if (node.internal.type === `MarkdownRemark`) {
@@ -43,7 +50,40 @@ exports.createPages = async ({ graphql, actions }) => {
 		}
 	`);
 
-	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+	const edges = result.data.allMarkdownRemark.edges;
+	for (const edge of edges) {
+		const { node } = edge;
+		const slugShareImage = getShareImageFilenameFromSlug(node.fields.slug);
+		const resultShareImages = await graphql(`
+			query {
+				allFile(
+					filter: {
+						relativeDirectory: { eq: "images/meta-share-images" }
+						name: { regex: "/^${slugShareImage}-(twitter|facebook|linkedin)$/i" }
+					}
+				) {
+					nodes {
+						publicURL
+					}
+				}
+			}
+		`);
+		const shareImages = resultShareImages.data.allFile.nodes.reduce(
+			(acc, curr) => {
+				const socialMedias = ["facebook", "twitter", "linkedin"];
+				for (const socialMedia of socialMedias) {
+					const reg = new RegExp(`-${socialMedia}.png$`, "i");
+					if (curr.publicURL.search(reg) > -1) {
+						return {
+							...acc,
+							[socialMedia]: curr.publicURL,
+						};
+					}
+				}
+			},
+			{}
+		);
+
 		createPage({
 			path: node.fields.slug,
 			component: path.resolve(`./src/templates/blog-post.js`),
@@ -51,6 +91,7 @@ exports.createPages = async ({ graphql, actions }) => {
 				// Data passed to context is available
 				// in page queries as GraphQL variables.
 				slug: node.fields.slug,
+				shareImages: shareImages,
 			},
 		});
 
@@ -66,5 +107,5 @@ exports.createPages = async ({ graphql, actions }) => {
 				},
 			});
 		}
-	});
+	}
 };

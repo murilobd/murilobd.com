@@ -75,7 +75,8 @@ const main = async () => {
 		for (const socialMedia in socialMedias) {
 			const destinationFile = join(
 				process.cwd(),
-				"static",
+				"src",
+				"images",
 				"meta-share-images",
 				`${file.slug}-${socialMedia}.png`
 			);

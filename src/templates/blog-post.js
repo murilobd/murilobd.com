@@ -5,16 +5,16 @@ import SEO from "../components/seo";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
 
-function getShareImageFilenameFromSlug(slug) {
-	// slug = /page-slug/
-	// slug = /folder/page-slug/
-	const splitSlug = slug.split("/").filter(content => content !== "");
-	return splitSlug[splitSlug.length - 1];
-}
+// function getShareImageFilenameFromSlug(slug) {
+// 	// slug = /page-slug/
+// 	// slug = /folder/page-slug/
+// 	const splitSlug = slug.split("/").filter(content => content !== "");
+// 	return splitSlug[splitSlug.length - 1];
+// }
 
 export default function BlogPost({ data, pageContext }) {
 	const post = data.markdownRemark;
-	const shareImageFilename = getShareImageFilenameFromSlug(pageContext.slug);
+	const shareImages = pageContext.shareImages;
 
 	const titleDescription = (
 		<time dateTime={post.frontmatter.date}>
@@ -28,7 +28,7 @@ export default function BlogPost({ data, pageContext }) {
 				title={post.frontmatter.title}
 				description={post.excerpt}
 				type="article"
-				shareImage={shareImageFilename}
+				shareImages={shareImages}
 			/>
 			<div className="bg-white px-5 sm:px-6">
 				<div
@@ -54,3 +54,28 @@ export const query = graphql`
 		}
 	}
 `;
+
+/**
+ * query($slug: String!, $slugShareImageFacebook: String!) {
+		markdownRemark(fields: { slug: { eq: $slug } }) {
+			html
+			frontmatter {
+				title
+				date
+				datehuman: date(formatString: "dddd, MMMM DD, YYYY")
+				tags
+			}
+			excerpt
+		}
+		allFile(
+			filter: {
+				relativeDirectory: { eq: "images/meta-share-images" }
+				name: { eq: $slugShareImageFacebook }
+			}
+		) {
+			nodes {
+				publicURL
+			}
+		}
+	}
+ */

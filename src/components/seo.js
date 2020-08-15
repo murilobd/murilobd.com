@@ -16,7 +16,7 @@ function SEO({
 	lang,
 	meta,
 	title,
-	shareImage = null,
+	shareImages = {},
 	type = "website",
 }) {
 	const { site } = useStaticQuery(
@@ -64,17 +64,17 @@ function SEO({
 					property: `og:type`,
 					content: type,
 				},
-				(shareImage && {
+				(shareImages.facebook && {
 					property: `og:image`,
-					content: `${site.siteMetadata.url}/static/${shareImage}-facebook.png`,
+					content: `${site.siteMetadata.url}${shareImages.facebook}`,
 				}) ||
 					{},
-				(shareImage && {
+				(shareImages.facebook && {
 					property: `og:image:width`,
 					content: `1200`,
 				}) ||
 					{},
-				(shareImage && {
+				(shareImages.facebook && {
 					property: `og:image:height`,
 					content: `628`,
 				}) ||
@@ -99,9 +99,9 @@ function SEO({
 					name: `twitter:description`,
 					content: metaDescription,
 				},
-				(shareImage && {
+				(shareImages.twitter && {
 					property: `twitter:image`,
-					content: `${site.siteMetadata.url}/static/${shareImage}-twitter.png`,
+					content: `${site.siteMetadata.url}${shareImages.twitter}`,
 				}) ||
 					{},
 			].concat(meta)}
