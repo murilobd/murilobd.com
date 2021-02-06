@@ -2,8 +2,8 @@ const tailwindConfig = require("./tailwind.config.js");
 
 module.exports = {
 	siteMetadata: {
-		title: `MuriloBD.com Blog`,
-		description: `Blog for web developer full-stack Murilo Boareto Delefrate`,
+		title: `MuriloBD.com`,
+		description: `Software Engineer Murilo Boareto Delefrate`,
 		author: `Murilo Boareto Delefrate`,
 		twitter: "@murilobd",
 		url: "https://murilobd.com",
@@ -65,9 +65,30 @@ module.exports = {
 				background_color: `#663399`,
 				theme_color: `#663399`,
 				display: `minimal-ui`,
-				// icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+				icon: `src/images/ico588x588.png`,
 			},
 		},
-		// `gatsby-plugin-offline`,
+		{
+			resolve: `gatsby-plugin-modal-routing`,
+			options: {
+				modalProps: {
+					style: {
+						overlay: { zIndex: 200 },
+					},
+				},
+			},
+		},
+		/**
+		 * Get JSON project files to transform into pages
+		 */ `gatsby-transformer-json`,
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `projects`,
+				path: `${__dirname}/src/pages/projects`,
+			},
+		},
+
+		`gatsby-plugin-offline`,
 	],
 };

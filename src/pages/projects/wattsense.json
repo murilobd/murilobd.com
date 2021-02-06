@@ -1,0 +1,24 @@
+{
+	"slug": "wattsense",
+	"title": "Wattsense",
+	"description": "<p>A simple and open IoT solution that allows you to control and monitor buildings of any size. Reduce energy consumption and improve occupant comfort with Wattsense.</p><p>Wattsense is a start-up based on Lyon and I work as lead front-end engineer. Responsibilities are to guarantee website and client's console are always up and running as well as design and implement them.</p><p>One of the remarkable project I could work was the idealization and implementation of Configuration Wizard: a system that allows customers to configure an equipment within the Box in a few clicks. This was possible by mapping, saving and providing through an API all the configuration from many equipments.</p><p>Another important project develop was porting the user console into an Desktop Application so users could use the Hub in an offline environment.</p><p>Front-end developed with VueJS, back-end developed with Laravel 7 and MySQL as database</p>",
+	"technologies": [
+		"html5",
+		"css3",
+		"sass",
+		"vuejs",
+		"laravel",
+		"mysql",
+		"docker",
+		"nodejs"
+	],
+	"date": "Jun 2018",
+	"pictures": [
+		{ "url": "1.jpg", "desc": "Initial page with map showing all Boxes" },
+		{ "url": "2.jpg", "desc": "List Boxes user has access to" },
+		{
+			"url": "3.jpg",
+			"desc": "Detail showing received values from a property from an equipment"
+		}
+	]
+}

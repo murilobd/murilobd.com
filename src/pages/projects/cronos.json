@@ -1,0 +1,36 @@
+{
+	"slug": "cronos",
+	"title": "Cronos",
+	"description": "<p>Cronos is platform created to assist people with studying. The project uses timelines and was developed in 2 weeks as a prototype for a client that wanted to validate his business idea.</p><p>The tool has an interesting feature that allows users to select the level of privacy of their study timelines. When the timeline is set to be public everyone can check it but only its creator can edit it.</p><p>There's also a feature that allows users to create their own dictionaries, allowing them to add words and their meanings according to subjects meaningful to their timelines.</p><p>Front-end was developed using Bootstrap, SASS, jQuery and Blade Template Engine. In this project, jQuery's plugin Timeline JS3 was heavily used.</p><p>Laravel 5.3 was used as back-end.</p>",
+	"technologies": [
+		"html5",
+		"sass",
+		"bootstrap",
+		"jquery",
+		"laravel",
+		"mysql",
+		"gulpjs",
+		"git"
+	],
+	"date": "Sep 2016",
+	"pictures": [
+		{
+			"url": "1.jpg",
+			"desc": "Initial page after login. It's possible to see all public timelines"
+		},
+		{ "url": "2.jpg", "desc": "User's timelines" },
+		{ "url": "3.jpg", "desc": "Timeline's event" },
+		{ "url": "4.jpg", "desc": "Page to add a new event in timeline" },
+		{ "url": "5.jpg", "desc": "User's dictionaries" },
+		{ "url": "6.jpg", "desc": "Words of a dictionary" },
+		{ "url": "7.jpg", "desc": "Timeline - it's possible to add images" },
+		{
+			"url": "8.jpg",
+			"desc": "Timeline - it's possible to add Spotify songs"
+		},
+		{
+			"url": "9.jpg",
+			"desc": "Public timeline - This is a timeline of another user"
+		}
+	]
+}

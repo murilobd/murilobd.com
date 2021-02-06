@@ -1,0 +1,15 @@
+{
+	"slug": "efficientia",
+	"title": "Efficientia Assessoria",
+	"description": "<p>Efficientia Assessoria is a legal counseling company.</p><p>The website was developed using Wordpress and a custom theme. Also, I set up the company's e-mail infrastructure. </p>",
+	"technologies": ["wordpress"],
+	"date": "Nov 2016",
+	"pictures": [
+		{ "url": "1.jpg", "desc": "Landing page" },
+		{ "url": "2.jpg", "desc": "About page" },
+		{ "url": "3.jpg", "desc": "Blog's post" },
+		{ "url": "4.jpg", "desc": "Contact page" },
+		{ "url": "5.jpg", "desc": "Landing page - mobile phone" },
+		{ "url": "6.jpg", "desc": "Blog's post - mobile phone" }
+	]
+}

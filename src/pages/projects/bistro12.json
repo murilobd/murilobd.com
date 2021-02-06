@@ -1,0 +1,50 @@
+{
+	"slug": "bistro12",
+	"title": "Bistrô 12",
+	"description": "<p>Bistrô 12 is a website that allows users to buy meals made by local chefs and then have them delivered to their homes.</p><p>The system runs on 3 major areas: Available Chefs, Registered Users and General Administration.</p><p>In the Chefs section they can edit their profile; add/edit/delete meals; see all received orders; check the monthly revenues as well as reviews received from users.</p><p>In the Registered User's section it's possible to order a new meal, check all orders made and rate dishes.</p><p>The General Administration section allows approving chefs/meals; checking registered users, orders – including pending and cancelled ones – and changing the percentage charged for each chef.</p><p>Front-end developed with AngularJS 1.5, back-end developed with Laravel 5.1 and MySQL as database. Blog developed using Wordpress.</p>",
+	"technologies": [
+		"html5",
+		"css3",
+		"bootstrap",
+		"angularjs",
+		"laravel",
+		"wordpress",
+		"mysql",
+		"gulpjs",
+		"git"
+	],
+	"date": "Jan 2016 - Dec 2016",
+	"pictures": [
+		{ "url": "1.jpg", "desc": "Initial page" },
+		{ "url": "2.jpg", "desc": "Initial page showing meals" },
+		{ "url": "3.jpg", "desc": "Meal's description" },
+		{ "url": "4.jpg", "desc": "Chef's profile" },
+		{ "url": "5.jpg", "desc": "Chef's sold meals" },
+		{
+			"url": "6.jpg",
+			"desc": "Registered user area - Page with all orders made by user"
+		},
+		{ "url": "7.jpg", "desc": "Initial page - Mobile" },
+		{ "url": "8.jpg", "desc": "Initial page showing meals - Mobile" },
+		{
+			"url": "9.jpg",
+			"desc": "Registered user area - Page with all orders made by user - Mobile"
+		},
+		{
+			"url": "10.jpg",
+			"desc": "Registered user area - Details of an order - Mobile"
+		},
+		{
+			"url": "11.jpg",
+			"desc": "Registered user area - Details of an order - Mobile"
+		},
+		{ "url": "12.jpg", "desc": "Chef's area - Dashboard" },
+		{ "url": "13.jpg", "desc": "Chef's area - Revenues" },
+		{ "url": "14.jpg", "desc": "General Administration - Dashboard" },
+		{ "url": "15.jpg", "desc": "General Administration - Meal's page" },
+		{
+			"url": "16.jpg",
+			"desc": "General Administration - Details of a meal that is being sold"
+		}
+	]
+}

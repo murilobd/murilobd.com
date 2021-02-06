@@ -1,0 +1,11 @@
+{
+	"slug": "trade-alert",
+	"title": "Trade Alert",
+	"description": "<p>A personal project that aims to use computational power to detect possible trades to be make on stock market.</p><p>Using web scrapping techniques I was able to get all stock prices from Brazilian Stock Market (bovespa) since 2010 and store them into a mongodb database. Currently, it's analyzing moving averages and channels breakouts to send e-mails alerting of possible trades. The goal is to apply Machine Learning into this project.</p><p>Back-end developed with Laravel 8 and mysql to store alerts and users. Python being used to identify trades. MongoDB storing all stock prices. TensorFlow being used as Machine Learning framework.</p>",
+	"technologies": ["laravel", "mysql", "python", "tensorflow", "mongodb"],
+	"date": "Jan 2020",
+	"pictures": [
+		{ "url": "1.jpg", "desc": "Breakout channel example" },
+		{ "url": "2.jpg", "desc": "Crossing moving averages example" }
+	]
+}

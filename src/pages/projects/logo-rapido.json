@@ -1,0 +1,64 @@
+{
+	"slug": "logo-rapido",
+	"title": "Logo Rápido",
+	"description": "<p>LogoRápido is an easy tool for quick creation of logos. The system has many artwork options and allows users to customize colors as well as adding text to the templates and then exporting the files as HD images (either .png and .svg).</p><p>I developed with Angular JS 1.5 for the front-end, Laravel 5.1 for the back-end, and MySQL for the database.</p><p>I also developed an administration area in which is possible to upload new artworks, categories or fonts, as well as allowing full control of sales, pending or cancelled payments. Administration system developed using AngularJS. </p>",
+	"technologies": [
+		"html5",
+		"css3",
+		"angularjs",
+		"laravel",
+		"mysql",
+		"gulpjs",
+		"git"
+	],
+	"date": "Aug 2015 - Oct 2015",
+	"pictures": [
+		{ "url": "1.jpg", "desc": "Step 1 - User type his name" },
+		{
+			"url": "2.jpg",
+			"desc": "Step 2 - User select one of the many draws"
+		},
+		{ "url": "4.jpg", "desc": "Step 3 - Edit logo" },
+		{ "url": "5.jpg", "desc": "Step 3 - Edit logo" },
+		{ "url": "6.jpg", "desc": "Step 3 - Edit logo" },
+		{ "url": "7.jpg", "desc": "Step 3 - Edit logo" },
+		{ "url": "8.jpg", "desc": "Step 4 - Pay" },
+		{ "url": "9.jpg", "desc": "Step 3 in mobile phone" },
+		{ "url": "10.jpg", "desc": "Step 3 in mobile phone" },
+		{ "url": "11.jpg", "desc": "Step 3 in mobile phone" },
+		{
+			"url": "12.jpg",
+			"desc": "Step 3 in mobile phone - Chose a new font for text"
+		},
+		{ "url": "13.jpg", "desc": "Step 3 in mobile phone" },
+		{
+			"url": "14.jpg",
+			"desc": "Administration area - Add/Edit categories"
+		},
+		{ "url": "15.jpg", "desc": "Administration area - Add/Edit new draws" },
+		{
+			"url": "16.jpg",
+			"desc": "Administration area - Create variations of the same draw (change colors and text font)"
+		},
+		{
+			"url": "17.jpg",
+			"desc": "Administration area - Create variations of the same draw (change colors and text font)"
+		},
+		{
+			"url": "18.jpg",
+			"desc": "Administration area - Add infos about the product"
+		},
+		{
+			"url": "19.jpg",
+			"desc": "Administration area - Configure e-mail message users will receive after buying"
+		},
+		{
+			"url": "20.jpg",
+			"desc": "Administration area - Configure e-mail message users will receive after buying"
+		},
+		{
+			"url": "21.jpg",
+			"desc": "Administration area - Page to see all sales"
+		}
+	]
+}

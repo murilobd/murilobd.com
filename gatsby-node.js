@@ -28,6 +28,39 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
 	// **Note:** The graphql function call returns a Promise
 	const { createPage } = actions;
+
+	/**
+	 * Create project pages
+	 */
+	const jsonFiles = await graphql(`
+		query {
+			allProjectsJson {
+				edges {
+					node {
+						title
+						technologies
+						slug
+						pictures {
+							desc
+							url
+						}
+						date
+						description
+					}
+				}
+			}
+		}
+	`);
+	const jsonFilesEdges = jsonFiles.data.allProjectsJson.edges;
+	for (const edge of jsonFilesEdges) {
+		const { node } = edge;
+		createPage({
+			path: `projects/${node.slug}`,
+			component: path.resolve(`./src/templates/home-project.js`),
+			context: node,
+		});
+	}
+
 	const result = await graphql(`
 		query {
 			allMarkdownRemark {

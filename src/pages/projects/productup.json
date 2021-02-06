@@ -1,0 +1,13 @@
+{
+	"slug": "productup",
+	"title": "ProductUp",
+	"description": "<p>Helping professionals to learn about Product Management in a fun and effective way.</p><p>Used Ghost for browsers. Mobile App developed with React Native. Firebase as database.</p>",
+	"technologies": ["reactjs"],
+	"date": "Jan 2020 - Dez 2020",
+	"pictures": [
+		{ "url": "1.png", "desc": "" },
+		{ "url": "2.png", "desc": "" },
+		{ "url": "3.png", "desc": "" },
+		{ "url": "4.png", "desc": "" }
+	]
+}

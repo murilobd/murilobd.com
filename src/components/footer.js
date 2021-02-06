@@ -47,7 +47,7 @@ const Header = ({ siteTitle }) => (
 						<a
 							href="https://www.gatsbyjs.org"
 							target="_blank"
-							rel="noreferrer"
+							rel="noreferrer nofollower"
 						>
 							Gatsby
 						</a>

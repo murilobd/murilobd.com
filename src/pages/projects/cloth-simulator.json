@@ -1,0 +1,42 @@
+{
+	"slug": "cloth-simulator",
+	"title": "Online Clothing Simulator",
+	"description": "<p>Online Clothing Simulator is a tool in which users can choose between many types of cloths to be displayed on a manikin, customize colors, add custom logos to the template and then ask for a budget.</p><p>This Project was developed with ReactJS and Flux for front-end. In the Administration section I developed using ReactJS and Redux.</p><p>Back-end was developed using Lumen 5.3. I chose Lumen because the server-side was just for a few GET/POST requests and user authentication.</p>",
+	"technologies": [
+		"html5",
+		"sass",
+		"bootstrap",
+		"reactjs",
+		"webpack",
+		"lumen",
+		"mysql",
+		"git"
+	],
+	"date": "Oct 2016 - Dec 2016",
+	"pictures": [
+		{ "url": "1.jpg", "desc": "Simmulator" },
+		{ "url": "2.jpg", "desc": "Selected a new tshirt" },
+		{ "url": "3.jpg", "desc": "Selected a new tshirt" },
+		{ "url": "4.jpg", "desc": "Changed tshirt colors" },
+		{ "url": "5.jpg", "desc": "Changed cap colors" },
+		{ "url": "6.jpg", "desc": "Added a custom logo in tshirt" },
+		{ "url": "7.jpg", "desc": "Asked for budget" },
+		{
+			"url": "8.jpg",
+			"desc": "Administration area - Dashboard with infos"
+		},
+		{
+			"url": "9.jpg",
+			"desc": "Administration area - All tshirts in system"
+		},
+		{
+			"url": "10.jpg",
+			"desc": "Administration area - Page showing a specific item"
+		},
+		{ "url": "11.jpg", "desc": "Administration area - All budgets" },
+		{
+			"url": "12.jpg",
+			"desc": "Administration area - Page showing specific budget"
+		}
+	]
+}

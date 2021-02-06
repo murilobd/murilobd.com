@@ -1,0 +1,28 @@
+{
+	"slug": "namao",
+	"title": "Na Mão",
+	"description": "<p>Na Mão is a project aimed at empowering retailers giving them full control over credit and debit card transactions, identifying irregularities with transactions and payments.</p><p>Project began during a Startup Weekend and the system was initially developed using Lumen for fast prototyping but it's currently being migrated to Laravel 5.3.</p><p>The system was developed initially with Lumen, as a fast-prototype, but it's already being migrate to Laravel 5.4.</p><p>The landing page uses Google Material Design but council system runs on Bootstrap, Blade Template Engine and jQuery.</p>",
+	"technologies": [
+		"html5",
+		"css3",
+		"bootstrap",
+		"jquery",
+		"laravel",
+		"mysql",
+		"gulpjs",
+		"git"
+	],
+	"date": "Oct 2016 - Jan 2017",
+	"pictures": [
+		{ "url": "1.jpg", "desc": "Landing Page" },
+		{ "url": "2.jpg", "desc": "Landing Page" },
+		{
+			"url": "3.jpg",
+			"desc": "Administration area - Page where retailer input he's sales"
+		},
+		{
+			"url": "4.jpg",
+			"desc": "Administration area - Page where retailer see in details all transactions of a day"
+		}
+	]
+}

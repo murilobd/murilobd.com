@@ -1,0 +1,36 @@
+{
+	"slug": "bsn-adv",
+	"title": "BSNADV - Law Firm Management System",
+	"description": "<p>BNSADV is a Law firm management system that required multiple programmers and designers to be completed. The main structure was developed using PHP 5.4, and Bootstrap as well as jQuery for the front-end (except for the e-mail module that was developed using VueJS).</p><p>The modules I developed for this platform were:<ul><li><strong>Chat:</strong> Real time chat in which users can use emoticons, audio and other files, running on a node.js server with socket.io. The front-end was developed using jQuery and Bootstrap.</li><li><strong>Finances:</strong> A complete financial system that covers everything from simple payment methods to a cash flow system that can interpret and calculate bills that are unique, installments or permanent.</li><li><strong>E-mail:</strong> Users can save their e-mail info (passwords are encrypted and then saved to a database) and have full access to e-mails using this system. IMAP protocol was used to communicate with the e-mail server in order to guarantee the sync between all e-mail clients. Unlike the rest of the BSNADV platform, the e-mail front-end was developed using VueJS.</li><li><strong>Layout:</strong> A module that allows users to customize a few options such as menu colors, choose between a fixed side menu or a hidden one, as well as setting the system to run on a full-screen mode.</li></ul></p>",
+	"technologies": [
+		"html5",
+		"css3",
+		"bootstrap",
+		"jquery",
+		"vuejs",
+		"socketio",
+		"php",
+		"nodejs",
+		"mysql",
+		"git"
+	],
+	"date": "Nov 2016 - Jan 2017",
+	"pictures": [
+		{ "url": "1.jpg", "desc": "E-mail's initial page (INBOX)" },
+		{ "url": "2.jpg", "desc": "Write new e-mails" },
+		{ "url": "3.jpg", "desc": "Openned e-mail" },
+		{ "url": "4.jpg", "desc": "Answer/forward e-mail" },
+		{
+			"url": "5.jpg",
+			"desc": "Notification on header showing unread e-mails"
+		},
+		{ "url": "6.jpg", "desc": "Cash flow screen" },
+		{ "url": "7.jpg", "desc": "Cash flow screen" },
+		{ "url": "8.jpg", "desc": "Cash flow screen with filters" },
+		{ "url": "9.jpg", "desc": "Cash flow screen with filters" },
+		{ "url": "10.jpg", "desc": "Chat users on right side" },
+		{ "url": "11.jpg", "desc": "Messages from users in chat" },
+		{ "url": "12.jpg", "desc": "Layout configuration page" },
+		{ "url": "13.jpg", "desc": "Layout configuration page" }
+	]
+}

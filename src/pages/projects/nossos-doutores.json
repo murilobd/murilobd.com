@@ -1,0 +1,28 @@
+{
+	"slug": "nossos-doutores",
+	"title": "Nossos Doutores",
+	"description": "<p>The Nossos Doutores portal allows the scheduling of private consultations with health professionals, via the Internet, 24 hours a day, 7 days a week, based on location, specialty, available agenda and price criteria. It is a project with a huge success and the average monthly access to the site is around 10 thousand users.</p><p>The website has 4 parts: the area of the search for professionals and the other 3 parts are administrative: patients, health professionals and site managers.</p><p>In the area of the search for professionals, during the search, two main criteria are considered: the specialty of the professional and the distance from the patient. For this, a geolocation system is used that searches the professionals closest to the patient. In the search result, the patient can choose among the different professionals for what is most convenient: distance, agenda and price.In the patient's administrative area he can view all the medical appointments and professionals with whom he has already consulted, as well as manage the appointments.</p><p>In the professional’s administrative area, it is where register the clinic of care and the professionals, the agenda of each professional, the payment of the monthly fee to appear in the search and the approval, cancellation and alteration of the appointments.</p><p>In the website manager’s administrative area is where they authorise/refuse the application for professional registration, view all the subscriptions, manage the specialties and locations available to patients, clinics and appointment scheduled.</p><p>Front-end was developed with Angular 4 using all good practices from Angular Material. Back-end was developed with Laravel 5.4 and Docker. Database is running with MySQL 5.7 and hosting provider is AWS.</p>",
+	"technologies": [
+		"html5",
+		"sass",
+		"angular",
+		"webpack",
+		"docker",
+		"laravel",
+		"redis",
+		"mysql",
+		"git"
+	],
+	"date": "Aug 2017 - Dec 2018",
+	"pictures": [
+		{ "url": "1.jpg", "desc": "Initial page" },
+		{ "url": "2.jpg", "desc": "Search result" },
+		{ "url": "3.jpg", "desc": "Professional's profile" },
+		{ "url": "4.jpg", "desc": "Professional's dashboard" },
+		{ "url": "5.jpg", "desc": "Professional's dashboard" },
+		{ "url": "6.jpg", "desc": "Professional's dashboard" },
+		{ "url": "7.jpg", "desc": "Professional's dashboard" },
+		{ "url": "8.jpg", "desc": "Professional's dashboard" },
+		{ "url": "9.jpg", "desc": "Professional's dashboard" }
+	]
+}
