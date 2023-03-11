@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileImg from "../../images/murilo-boareto-delefrate.jpg";
+import ProfileImg from "../../images/murilo-b-delefrate.jpg";
 
 const HomeWhoAmI = () => {
 	return (
@@ -10,7 +10,7 @@ const HomeWhoAmI = () => {
 					<p className="mt-3 text-base font-light text-gray-500 text-left sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
 						I'm Murilo, nice to meet you. I have a B.S. in
 						Electrical Engineer with emphasis in Computing from
-						Uberlândia's Federal University, 6+ years of
+						Uberlândia's Federal University, 7+ years of
 						professional experience as a Software Engineer. I have
 						already worked at some IT consulting companies, at AmBev
 						(AB InBev group) and did some freelancing works. Since
@@ -24,7 +24,7 @@ const HomeWhoAmI = () => {
 						>
 							Wattsense
 						</a>{" "}
-						as a Lead Front-End Engineer.
+						as a Senior Front-End Engineer.
 					</p>
 					<p className="mt-3 text-base font-light text-gray-500 text-left sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
 						Bellow there are some of my skills and the latest

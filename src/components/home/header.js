@@ -61,6 +61,13 @@ const HomeHeader = () => {
 						</div>
 						<div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0 md:space-x-5">
 							<Link
+								to="https://consultant.murilobd.com/"
+								className="font-medium text-gray-500 hover:text-gray-900"
+							>
+								Consultant
+							</Link>
+						
+							<Link
 								to="/blog"
 								className="font-medium text-gray-500 hover:text-gray-900"
 							>

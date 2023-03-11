@@ -2,7 +2,7 @@
   "name": "murilobd-blog",
   "private": false,
   "description": "Murilo Boareto Delefrate Blog - Software Engineer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Murilo Boareto Delefrate <murilo@murilobd.com>",
   "dependencies": {
     "@deckdeckgo/highlight-code": "^2.3.2",
